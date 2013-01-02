@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+	
+	<servlet>
+        <servlet-name>Servlet</servlet-name>
+        <servlet-class>com.leec.lmodules_article.servlet.Servlet</servlet-class>
+    </servlet>
+    <servlet-mapping>    
+        <servlet-name>Servlet</servlet-name>
+        <url-pattern>/Servlet.do</url-pattern>
+    </servlet-mapping>
+    
+    
+    	<servlet> 
+		<servlet-name>TimerServlet1</servlet-name>
+		<servlet-class>com.leec.lmodules_article.servlet.TimerServlet1</servlet-class>
+		<init-param>
+			<param-name>startTask</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>intervalTime</param-name>
+			<param-value>1</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+		<!-- 设置某项的启动顺序，一般像数据库连接池等模块需要优先启动的，就在web.xml中设置启动优先级。
+		中间的值越小，优先级就越高。 -->
+	</servlet>
+    
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+
+</web-app>
