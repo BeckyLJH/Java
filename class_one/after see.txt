@@ -1,0 +1,36 @@
+1.熟悉Java版本
+Java SE(Java Standard Edition):	 Java 标准版  → J2SE
+Java ME(Java Mobile Edition):	 Java 移动版  → J2ME
+Java EE(Java Enterprise Edition):Java 企业版  → J2EE
+
+2.熟悉Java环境
+JDK(Java Development Kit):		Java开发包(包含了编译与执行文件的一切，bin内有java.exe及javac.exe)
+JRE(Java Runtime Environment): 	Java执行环境(包含了执行文件的一切，bin内有java.exe)
+	→ → → JDK包含了JRE
+
+3.修改环境变量
+法一(解压JDK)：	
+(1)计算机系统属性 → 新建JAVA_HOME → F:\javasoft\jdk
+(2)修改Path → ;%JAVA_HOME%/bin;
+(3)新建CLASSPATH → .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;F:\javasoft\mysql-connector-java-5.1.5-bin.jar;F:\javasoft\apache-tomcat-6.0.18.rar;
+法二(安装JDK)：
+(1)用户变量或系统变量中添加path → D:\Program Files\jdk\bin
+	当在cmd中输入java -version，会输出版本等等信息，也就是说环境变量path的jdk帮助cmd识别命令行中的java命令
+	(用户变量中添加path表示只对当前用户有用)
+	(系统变量中添加path则是对所有用户有用)
+
+4.编写Java程序并编译运行	
+(1)编写Java代码(Test.java → 文件后缀为.java)
+(2)编译 → javac Test.java(编译后生成一个Test.class文件)
+(3)执行 → java Test(其实执行的是Test.class文件，执行时无需写后缀)
+
+
+
+
+总结配置Java环境以及关联环境
+(1)配JDK(安装或解压) → 配环境变量F:\javasoft\jdk
+(2)安装mysql → 配环境变量F:\javasoft\mysql-connector-java-5.1.5-bin.jar;
+(3)安装mysql-Front
+(4)安装myeclipse
+(5)配Tomcat → 配环境变量F:\javasoft\apache-tomcat-6.0.18.rar;
+
